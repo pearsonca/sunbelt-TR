@@ -1,96 +1,55 @@
 \documentclass{article}
 
-\usepackage{amsmath,hyperref}
-
-\newcommand{\Mp}{\ensuremath{{M_{+}}}}
-\newcommand{\barMp}{\ensuremath{\overline{\Mp}}}
-\newcommand{\Dt}{\ensuremath{\Delta t}}
-\newcommand{\tM}[1]{\ensuremath{\tilde{M}(#1)}}
-\newcommand{\tMt}{\tM{\tau}}
-\newcommand{\tMB}{\ensuremath{{\tilde{M}_B}}}
-\newcommand{\tE}[1]{\ensuremath{{\tilde{E}(#1)}}}
-\newcommand{\tEt}{\tE{\tau}}
+\usepackage{hyperref,multicol}
+\usepackage[total={7in,9.5in},top=0.5in,left=0.5in,includefoot]{geometry}
 
 \author{Carl~A.~B.~Pearson}
 
-\usepackage{Sweave}
 \begin{document}
-\input{template-concordance}
-\title{A TEMPLATE}
+
+\title{SUNBELT XXXIII TRIP REPORT}
 
 %\institute{Emerging Pathogens Institute, University of Florida}
-\titlepage
+\maketitle
 
-\section{A SIMPLE LIST OF POINTS}
+\section*{Conference Info}
+\href{http://hamburg-sunbelt2013.org/}{Sunbelt 2013: http://hamburg-sunbelt2013.org/}
+\begin{description}
+\item[Location] Hamburg University, Hamburg Germany.
+\item[Organization] run by International Network for Social Network Analysis, from 21 - 26 MAY 2013.  Training workshops the first few days, talk-based sessions through Sunday.
+\end{description}
+
+\section*{Trip Review}
+We original proposed attending Sunbelt XXXIII with the MURI program manager (J. Lavery, ARO) at a meeting in SEP 2012.  He encouraged presenting at this conference and similar ones, especially for the members of the MURI that were coming from the less social-science oriented background as a means to encourage collaboration within the group and to expose the members from natural sciences and engineering backgrounds to the questions and methods of the social sciences.
+
+I presented MURI material in the Criminals, Gangs, Terrorists 2 session (as well as chairing that session).
+That presentation lead to discussion with contacts at West Point and SAIC working on similar material.  Subsequently, we were invited to a conference to be held at West Point (pending authorization of that conference by the Academy) and are working on a possible collaboration with SAIC based on some anonymized telecom data they have.  Recent revelations about USG and contractor activities relative to this kind of data, however, have put that collaboration on indefinite hold.
+
+I also discussed MURI-related research with other group members in attendance.
+
+Our presentation materials available at git: \href{https://github.com/pearsonca/sunbelt13-presentation}{sunbelt-presentation} and \href{https://github.com/pearsonca/scala-commsim}{scala-commsim}.
+
+Ultimately, the conference informed me about what methods are current in Social Network Analysis.  This insight will be highly useful as we move forward with explaining our new approaches and results to this community.
+
+\section*{Sessions Attended}
+\begin{multicols}{2}
 \begin{itemize}
-\item point one,
-\item two,
-\item see
+\item\href{http://www.insna.org/program2013/session.php?id=1|we-pm-1|Lecture\%20Hall\%20M}{Agent-Based Models and Multi-Agent Systems}
+\item\href{http://www.insna.org/program2013/session.php?id=1|we-pm-2|Lecture%20Hall%20C}{Mixed Method Network Studies 1}
+\item\href{http://www.insna.org/program2013/session.php?id=2|th-am-1|Lecture%20Hall%20A}{Negative ties in networks 1}
+\item\href{http://www.insna.org/program2013/session.php?id=2|th-am-2|Room%20125}{Visual, participatory network analysis}
+\item\href{http://www.insna.org/program2013/session.php?id=2|th-pm-1|Lecture%20Hall%20B}{Measurement 1}
+\item\href{http://www.insna.org/program2013/session.php?id=2|th-pm-2|Lecture%20Hall%20M}{Large Scale Networks Analysis 1}
+\item\href{http://www.insna.org/program2013/session.php?id=3|fr-am-1|Lecture%20Hall%20J}{Criminals, Gangs, Terrorists, and Networks 1}
+\item\href{http://www.insna.org/program2013/session.php?id=3|fr-am-2|Lecture%20Hall%20J}{Covert Networks}
+\item\href{http://www.insna.org/program2013/session.php?id=3|fr-pm-1|Lecture%20Hall%20A}{Mathematical and Statistical Network Models 1}
+\item\href{http://www.insna.org/program2013/session.php?id=3|fr-pm-2|Lecture%20Hall%20H}{Criminals, Gangs, Terrorists, and Networks 2}
+\item\href{http://www.insna.org/program2013/session.php?id=4|sa-am-1|Lecture%20Hall%20A}{Multi-level Networks Analysis 2}
+\item\href{http://www.insna.org/program2013/session.php?id=4|sa-am-2|Room%20125}{Economics, Markets, and Networks 1}
+\item\href{http://www.insna.org/program2013/session.php?id=4|sa-pm-1|Lecture%20Hall%20A}{Mathematical and Statistical Network Models 2}
+\item\href{http://www.insna.org/program2013/session.php?id=4|sa-pm-2|Lecture%20Hall%20M}{Game Theory and Social Networks}
 \end{itemize}
+\end{multicols}
 
-\section{INSERTING AN R-GENERATED FIGURE}
-\begin{figure}
-\begin{center}
-\includegraphics{template-plotfig1}
-\end{center}
-\end{figure}
-% notes-notes-notes
-
-\section{INSERT ANOTHER PDF}
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.9\textwidth]{insert.pdf}
-\caption{Bicout et al. J. Med. Entomol. 43(5): 936-946 (2006)}
-\end{center}
-\end{figure}
-% this is a not uncommon measurement of a seasonally varying vector population.
-
-\section{SHOW SOME MATH}
-$$
-M(t) = C\sin(\omega t+\theta)
-$$
-
-\section{SEVERAL EQUATIONS}
-\begin{align*}
-E(t) &= \begin{cases}
-        \dfrac{\Mp}{\Dt} & t \in \Dt \\
-        0 & \textrm{otherwise}
-        \end{cases}\tag{Step} \\
-E(\rho, t) &= \begin{cases}
-        \dfrac{2\Mp}{\Dt(2-\rho)} & t \in \Dt(1-\rho) \\
-        \dfrac{2\Mp}{\Dt(2-\rho)\rho}\left(1-\dfrac{2|t|}{\Dt}\right) & t \in \rho\Dt \\
-        0 & \textrm{otherwise}
-        \end{cases}\tag{Modified Step} \\
-E(t) &= \dfrac{2\Mp}{\Dt}\sqrt{\dfrac{2}{\pi}}e^{-\dfrac{8t^2}{\Dt^2}}\tag{Approximate $\delta$}
-\end{align*}
-
-% DEFINE LOTS OF R...
-
-% THEN USE IT SEVERAL TIMES
-\section{THINGS}
-\subsection{Modified Step (Trapezoid)}
-\begin{figure}
-\begin{center}
-\includegraphics{template-pstrap}
-\end{center}
-\end{figure}
-
-\subsection{Modified Step (Triangle)}
-\begin{figure}
-\begin{center}
-\includegraphics{template-pstri}
-\end{center}
-\end{figure}
-
-\subsection{Approx. $\delta$}
-\begin{figure}
-\begin{center}
-\includegraphics{template-psdel}
-\end{center}
-\end{figure}
-
-\section{BIBLIOGRAPHY EXAMPLE (CITE ON PREV SLIDE)}
-\bibliography{biblio}{}
-\bibliographystyle{plain}
 
 \end{document}
